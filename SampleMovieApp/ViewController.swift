@@ -11,7 +11,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .orange
+        navigationController?.navigationBar.isHidden = true
         // Do any additional setup after loading the view.
+
     }
 
 
