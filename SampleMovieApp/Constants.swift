@@ -12,9 +12,10 @@ struct Constants {
     static let NoInternetAlertTitle = "Error"
     static let NoInternetAlertMessage = "You're offline"
     static let OKText = "OK"
-    static let DelayTimeForTransitionToMainPage = 0
+    static let DelayTimeForTransitionToMainPage = 3
     static let ScreenWidth = UIScreen.main.bounds.size.width
     static let SearchBarPlaceholder = "Search movies"
     static let InitialSampleSearchKey = "Lord"
     static let WildcardCharacter = "*"
+    static let IMDBRating = "IMDB Rating: "
 }

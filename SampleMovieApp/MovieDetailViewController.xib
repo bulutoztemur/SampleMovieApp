@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MovieDetailViewController" customModule="SampleMovieApp" customModuleProvider="target">
+            <connections>
+                <outlet property="imdbRatingLabel" destination="hb0-Pv-dP8" id="IcA-HN-iO4"/>
+                <outlet property="moviePosterImageView" destination="oBL-6g-Eat" id="plT-Mw-3zT"/>
+                <outlet property="movieTitleLabel" destination="UUc-9j-c2O" id="wrK-e2-VBo"/>
+                <outlet property="plotLabel" destination="fsy-nP-7OE" id="ikr-vK-PKh"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oBL-6g-Eat">
+                    <rect key="frame" x="0.0" y="44" width="414" height="269"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUc-9j-c2O">
+                    <rect key="frame" x="30" y="323" width="354" height="0.0"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hb0-Pv-dP8">
+                    <rect key="frame" x="30" y="333" width="354" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fsy-nP-7OE">
+                    <rect key="frame" x="30" y="343" width="354" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fsy-nP-7OE" firstAttribute="top" secondItem="hb0-Pv-dP8" secondAttribute="bottom" constant="10" id="1Hf-Jh-sj3"/>
+                <constraint firstItem="hb0-Pv-dP8" firstAttribute="top" secondItem="UUc-9j-c2O" secondAttribute="bottom" constant="10" id="3Af-TY-Cwc"/>
+                <constraint firstItem="UUc-9j-c2O" firstAttribute="trailing" secondItem="hb0-Pv-dP8" secondAttribute="trailing" id="8qE-uE-KIm"/>
+                <constraint firstItem="hb0-Pv-dP8" firstAttribute="leading" secondItem="fsy-nP-7OE" secondAttribute="leading" id="9kp-xm-2A6"/>
+                <constraint firstItem="hb0-Pv-dP8" firstAttribute="trailing" secondItem="fsy-nP-7OE" secondAttribute="trailing" id="9wJ-4V-OyH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="oBL-6g-Eat" secondAttribute="trailing" id="BiH-zK-fMG"/>
+                <constraint firstItem="hb0-Pv-dP8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="DVW-aK-1Ih"/>
+                <constraint firstItem="oBL-6g-Eat" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.3" id="TnZ-2y-2aW"/>
+                <constraint firstItem="UUc-9j-c2O" firstAttribute="top" secondItem="oBL-6g-Eat" secondAttribute="bottom" constant="10" id="ciL-cm-dAt"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hb0-Pv-dP8" secondAttribute="trailing" constant="30" id="rsg-mi-Kuy"/>
+                <constraint firstItem="oBL-6g-Eat" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="uWB-C3-dq1"/>
+                <constraint firstItem="oBL-6g-Eat" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="xAm-zT-2cn"/>
+                <constraint firstItem="UUc-9j-c2O" firstAttribute="leading" secondItem="hb0-Pv-dP8" secondAttribute="leading" id="xmP-yJ-mGg"/>
+            </constraints>
+            <point key="canvasLocation" x="43" y="70"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

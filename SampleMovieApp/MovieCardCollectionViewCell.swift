@@ -19,10 +19,12 @@ class MovieCardCollectionViewCell: UICollectionViewCell {
     
     func configureCell(movieData: Movie) {
         self.movieTitleLabel.text = movieData.title
-        if let posterUrl = movieData.poster {
-            self.moviePoster.load(url: URL(string: posterUrl)!)
+        if let posterPath = movieData.poster {
+            if let posterURL = URL(string: posterPath) {
+                self.moviePoster.load(url: posterURL)
+            }
         } else {
-            self.moviePoster.image = nil
+            self.moviePoster.image = UIImage(named: "noImage")
         }
         self.layer.cornerRadius = 5.0
     }

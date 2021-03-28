@@ -26,6 +26,9 @@
 		1727CFB026108E7E0041A9DE /* MovieCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1727CFAE26108E7E0041A9DE /* MovieCardCollectionViewCell.swift */; };
 		1727CFB126108E7E0041A9DE /* MovieCardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1727CFAF26108E7E0041A9DE /* MovieCardCollectionViewCell.xib */; };
 		1727CFB4261091D50041A9DE /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1727CFB3261091D50041A9DE /* UIImageViewExtension.swift */; };
+		1727CFE62610E6940041A9DE /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1727CFE42610E6940041A9DE /* MovieDetailViewController.swift */; };
+		1727CFE72610E6940041A9DE /* MovieDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1727CFE52610E6940041A9DE /* MovieDetailViewController.xib */; };
+		1727CFFD261108370041A9DE /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1727CFFC261108370041A9DE /* UIViewControllerExtension.swift */; };
 		D39E7AE31ACB3E52491B5DBF /* Pods_SampleMovieApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 033BEBFD84A9580B4A6F8ED1 /* Pods_SampleMovieApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +55,9 @@
 		1727CFAE26108E7E0041A9DE /* MovieCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCardCollectionViewCell.swift; sourceTree = "<group>"; };
 		1727CFAF26108E7E0041A9DE /* MovieCardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCardCollectionViewCell.xib; sourceTree = "<group>"; };
 		1727CFB3261091D50041A9DE /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		1727CFE42610E6940041A9DE /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
+		1727CFE52610E6940041A9DE /* MovieDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailViewController.xib; sourceTree = "<group>"; };
+		1727CFFC261108370041A9DE /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		4BD8BABD26024DE7D68F7246 /* Pods-SampleMovieApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleMovieApp.debug.xcconfig"; path = "Target Support Files/Pods-SampleMovieApp/Pods-SampleMovieApp.debug.xcconfig"; sourceTree = "<group>"; };
 		61D560F58A116CABC02E0ED6 /* Pods-SampleMovieApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleMovieApp.release.xcconfig"; path = "Target Support Files/Pods-SampleMovieApp/Pods-SampleMovieApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,6 +115,9 @@
 				1727CFAE26108E7E0041A9DE /* MovieCardCollectionViewCell.swift */,
 				1727CFAF26108E7E0041A9DE /* MovieCardCollectionViewCell.xib */,
 				1727CFB3261091D50041A9DE /* UIImageViewExtension.swift */,
+				1727CFE42610E6940041A9DE /* MovieDetailViewController.swift */,
+				1727CFE52610E6940041A9DE /* MovieDetailViewController.xib */,
+				1727CFFC261108370041A9DE /* UIViewControllerExtension.swift */,
 			);
 			path = SampleMovieApp;
 			sourceTree = "<group>";
@@ -189,6 +198,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1727CFE72610E6940041A9DE /* MovieDetailViewController.xib in Resources */,
 				1727CF39260D1B240041A9DE /* LaunchScreen.storyboard in Resources */,
 				1727CF4A260D2D740041A9DE /* GoogleService-Info.plist in Resources */,
 				1727CF9626104DB60041A9DE /* MainViewController.xib in Resources */,
@@ -251,6 +261,8 @@
 				1727CFAC2610822D0041A9DE /* Movies.swift in Sources */,
 				1727CF2F260D1B240041A9DE /* SceneDelegate.swift in Sources */,
 				1727CFA626107EEB0041A9DE /* Movie.swift in Sources */,
+				1727CFFD261108370041A9DE /* UIViewControllerExtension.swift in Sources */,
+				1727CFE62610E6940041A9DE /* MovieDetailViewController.swift in Sources */,
 				1727CF6C261043A60041A9DE /* ConnectivityManager.swift in Sources */,
 				1727CF91261049A10041A9DE /* Constants.swift in Sources */,
 				1727CF44260D26D70041A9DE /* SplashViewController.swift in Sources */,

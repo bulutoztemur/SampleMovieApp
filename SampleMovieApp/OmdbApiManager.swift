@@ -14,11 +14,23 @@ class OmdbApiManager {
     var pageID = 1 
     private let url = "https://www.omdbapi.com/"
     
-    func makeServiceCall(parameters: Parameters, process: @escaping ([Movie]) -> Void) {
+    func makeServiceCallForMovies(parameters: Parameters, process: @escaping ([Movie]) -> Void) {
         AF.request(OmdbApiManager.shared.url, parameters: parameters)
           .validate()
           .responseDecodable(of: Movies.self) { response in
             process(response.value?.search ?? [])
           }
     }
+    
+    func makeServiceCallForMovieDetail(parameters: Parameters, process: @escaping (MovieDetail) -> Void) {
+        AF.request(OmdbApiManager.shared.url, parameters: parameters)
+          .validate()
+          .responseDecodable(of: MovieDetail.self) { response in
+            print(response)
+            guard let response = response.value else { return }
+            process(response)
+          }
+    }
+
+    
 }

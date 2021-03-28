@@ -9,4 +9,5 @@ target 'SampleMovieApp' do
   pod 'Firebase/Core'
   pod 'Firebase/RemoteConfig'
   pod 'Alamofire', '~> 5.2'
+  pod 'MBProgressHUD', '~> 1.0'
 end

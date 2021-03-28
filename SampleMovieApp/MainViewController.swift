@@ -7,6 +7,7 @@
 
 import UIKit
 import Alamofire
+import MBProgressHUD
 
 class MainViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UISearchBarDelegate {
     
@@ -37,13 +38,15 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     func fetchData() {
-        OmdbApiManager.shared.makeServiceCall(parameters: self.createParameters()) { [weak self] (movieList) in
+        self.showIndicator()
+        OmdbApiManager.shared.makeServiceCallForMovies(parameters: self.createParameters()) { [weak self] (movieList) in
             self?.fetchedMovieList += movieList
             OmdbApiManager.shared.pageID += 1
             self?.collectionView.reloadData()
             if(movieList.count != 0) {
                 self?.isWaiting = false
             }
+            self?.hideIndicator()
         }
     }
         
@@ -87,25 +90,25 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         if indexPath.row == self.collectionView.numberOfItems(inSection: 0) - 3 && !isWaiting {
            isWaiting = true
-           self.doPaging()
+            self.fetchData()
         }
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let cellWidthRate: CGFloat = 6
-        let cellWidth = cellWidthRate * (Constants.ScreenWidth - 30) / 12
+        let cellWidth = (Constants.ScreenWidth - 30) / 2
         let cellHeight = cellWidth * 1.5
         return CGSize(width: cellWidth, height: cellHeight)
     }
-
-    private func doPaging() {
-        self.fetchData()
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let detailVC = MovieDetailViewController(imdbID: self.fetchedMovieList[indexPath.row].imdbID)
+        navigationController?.pushViewController(detailVC, animated: true)
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         OmdbApiManager.shared.pageID = 1
         self.fetchedMovieList = []
-        if searchText != "" {
+        if searchText.count > 2 {
             self.fetchData()
         } else {
             self.collectionView.reloadData()
