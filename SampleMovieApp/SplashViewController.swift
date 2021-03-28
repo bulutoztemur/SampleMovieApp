@@ -7,7 +7,6 @@
 
 import UIKit
 import Firebase
-import Alamofire
 
 class SplashViewController: UIViewController {
 
@@ -20,8 +19,8 @@ class SplashViewController: UIViewController {
     
     func setupPage(){
         self.hideNavigationBar()
-        if(self.checkInternetConnection()) {
-            self.fetchDataFromRemoteConfig()
+        if(ConnectivityManager.checkInternetConnection()) {
+            self.updateLabelOnSplash()
         } else {
             self.createNoInternetAlert()
         }
@@ -30,38 +29,27 @@ class SplashViewController: UIViewController {
     func hideNavigationBar() {
         navigationController?.navigationBar.isHidden = true
     }
-            
-    func fetchDataFromRemoteConfig(){
-        RemoteConfig.remoteConfig().fetch(withExpirationDuration: 0) { [unowned self] (status, error) in
-            guard error == nil else { return }
-            RemoteConfig.remoteConfig().activate()
-            self.updateLabelOnSplash()
+                
+    func updateLabelOnSplash() {
+        RemoteConfigManager.fetchDataFromRemoteConfig(myKey: Constants.SplashScreenLabelKeyForRC) { (valueForKey) in
+            self.splashLabel.text = valueForKey
+            self.transitionToMainPageWithDelay()
         }
     }
     
-    func updateLabelOnSplash() {
-        let labelText = RemoteConfig.remoteConfig().configValue(forKey: "loodos_text").stringValue ?? ""
-        self.splashLabel.text = labelText
-        self.transitionToMainPageWithDelay()
-    }
-    
     func transitionToMainPageWithDelay() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [weak self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(Constants.DelayTimeForTransitionToMainPage)) { [weak self] in
             self?.transitionToMainPage()
         }
     }
 
     func transitionToMainPage() {
-        self.navigationController?.pushViewController(ViewController(), animated: true)
-    }
-    
-    func checkInternetConnection() -> Bool {
-        return NetworkReachabilityManager()!.isReachable
+        self.navigationController?.pushViewController(MainViewController(), animated: true)
     }
     
     func createNoInternetAlert() {
-        let alert = UIAlertController(title: "Error", message: "You're offline", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .destructive, handler: nil))
+        let alert = UIAlertController(title: Constants.NoInternetAlertTitle, message: Constants.NoInternetAlertMessage, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: Constants.OKText, style: .destructive, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
 }
