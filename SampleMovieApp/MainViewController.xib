@@ -26,7 +26,7 @@
                     <textInputTraits key="textInputTraits"/>
                 </searchBar>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Ucg-47-Qhd">
-                    <rect key="frame" x="0.0" y="100" width="414" height="762"/>
+                    <rect key="frame" x="10" y="100" width="394" height="762"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xpQ-f7-UJG">
                         <size key="itemSize" width="128" height="128"/>
@@ -40,12 +40,12 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="Q7t-ow-056" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="1Lb-1g-pIX"/>
-                <constraint firstItem="Ucg-47-Qhd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="KNU-WR-hIl"/>
+                <constraint firstItem="Ucg-47-Qhd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="KNU-WR-hIl"/>
                 <constraint firstItem="Q7t-ow-056" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="QQh-GS-VU2"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Ucg-47-Qhd" secondAttribute="bottom" id="SHW-Dk-Itq"/>
                 <constraint firstItem="Ucg-47-Qhd" firstAttribute="top" secondItem="Q7t-ow-056" secondAttribute="bottom" id="krI-zk-dGv"/>
                 <constraint firstItem="Q7t-ow-056" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="rfo-QI-ATw"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ucg-47-Qhd" secondAttribute="trailing" id="sLk-Yr-PFK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ucg-47-Qhd" secondAttribute="trailing" constant="10" id="sLk-Yr-PFK"/>
             </constraints>
             <point key="canvasLocation" x="139" y="73"/>
         </view>
