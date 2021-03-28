@@ -39,7 +39,7 @@
 		1727CF2E260D1B240041A9DE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1727CF35260D1B240041A9DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1727CF38260D1B240041A9DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		1727CF3A260D1B240041A9DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1727CF3A260D1B240041A9DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = SampleMovieApp/Resource/Info.plist; sourceTree = SOURCE_ROOT; };
 		1727CF43260D26D70041A9DE /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		1727CF46260D27730041A9DE /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
 		1727CF49260D2D740041A9DE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -95,31 +95,95 @@
 		1727CF2B260D1B240041A9DE /* SampleMovieApp */ = {
 			isa = PBXGroup;
 			children = (
-				1727CF49260D2D740041A9DE /* GoogleService-Info.plist */,
-				1727CF2C260D1B240041A9DE /* AppDelegate.swift */,
-				1727CF2E260D1B240041A9DE /* SceneDelegate.swift */,
-				1727CF35260D1B240041A9DE /* Assets.xcassets */,
-				1727CF37260D1B240041A9DE /* LaunchScreen.storyboard */,
-				1727CF3A260D1B240041A9DE /* Info.plist */,
-				1727CF43260D26D70041A9DE /* SplashViewController.swift */,
-				1727CF46260D27730041A9DE /* SplashViewController.xib */,
-				1727CF6B261043A60041A9DE /* ConnectivityManager.swift */,
-				1727CF6E2610444E0041A9DE /* RemoteConfigManager.swift */,
-				1727CF90261049A10041A9DE /* Constants.swift */,
+				1727D00726110E920041A9DE /* Resource */,
+				1727D00626110E750041A9DE /* AppDelegate */,
+				1727D00526110E690041A9DE /* Resources */,
+				1727D00426110E580041A9DE /* Extensions */,
+				1727D00326110E480041A9DE /* Models */,
+				1727D00226110E280041A9DE /* ViewCells */,
+				1727D00126110E0A0041A9DE /* Managers */,
+				1727D00026110DE40041A9DE /* ViewControllers */,
+			);
+			path = SampleMovieApp;
+			sourceTree = "<group>";
+		};
+		1727D00026110DE40041A9DE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
 				1727CF9326104DB60041A9DE /* MainViewController.swift */,
 				1727CF9426104DB60041A9DE /* MainViewController.xib */,
+				1727CF43260D26D70041A9DE /* SplashViewController.swift */,
+				1727CF46260D27730041A9DE /* SplashViewController.xib */,
+				1727CFE42610E6940041A9DE /* MovieDetailViewController.swift */,
+				1727CFE52610E6940041A9DE /* MovieDetailViewController.xib */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		1727D00126110E0A0041A9DE /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				1727CF6B261043A60041A9DE /* ConnectivityManager.swift */,
+				1727CF6E2610444E0041A9DE /* RemoteConfigManager.swift */,
 				1727CFA22610799D0041A9DE /* OmdbApiManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		1727D00226110E280041A9DE /* ViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				1727CFAE26108E7E0041A9DE /* MovieCardCollectionViewCell.swift */,
+				1727CFAF26108E7E0041A9DE /* MovieCardCollectionViewCell.xib */,
+			);
+			path = ViewCells;
+			sourceTree = "<group>";
+		};
+		1727D00326110E480041A9DE /* Models */ = {
+			isa = PBXGroup;
+			children = (
 				1727CFA526107EEB0041A9DE /* Movie.swift */,
 				1727CFA8261080450041A9DE /* MovieDetail.swift */,
 				1727CFAB2610822D0041A9DE /* Movies.swift */,
-				1727CFAE26108E7E0041A9DE /* MovieCardCollectionViewCell.swift */,
-				1727CFAF26108E7E0041A9DE /* MovieCardCollectionViewCell.xib */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1727D00426110E580041A9DE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
 				1727CFB3261091D50041A9DE /* UIImageViewExtension.swift */,
-				1727CFE42610E6940041A9DE /* MovieDetailViewController.swift */,
-				1727CFE52610E6940041A9DE /* MovieDetailViewController.xib */,
 				1727CFFC261108370041A9DE /* UIViewControllerExtension.swift */,
 			);
-			path = SampleMovieApp;
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1727D00526110E690041A9DE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1727D00626110E750041A9DE /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				1727CF2C260D1B240041A9DE /* AppDelegate.swift */,
+				1727CF2E260D1B240041A9DE /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		1727D00726110E920041A9DE /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				1727CF49260D2D740041A9DE /* GoogleService-Info.plist */,
+				1727CF35260D1B240041A9DE /* Assets.xcassets */,
+				1727CF37260D1B240041A9DE /* LaunchScreen.storyboard */,
+				1727CF90261049A10041A9DE /* Constants.swift */,
+				1727CF3A260D1B240041A9DE /* Info.plist */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		1EF61057B43C0F32C0412501 /* Pods */ = {
@@ -412,7 +476,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = SampleMovieApp/Info.plist;
+				INFOPLIST_FILE = SampleMovieApp/Resource/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -431,7 +495,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = SampleMovieApp/Info.plist;
+				INFOPLIST_FILE = SampleMovieApp/Resource/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

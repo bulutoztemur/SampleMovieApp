@@ -26,7 +26,6 @@ class OmdbApiManager {
         AF.request(OmdbApiManager.shared.url, parameters: parameters)
           .validate()
           .responseDecodable(of: MovieDetail.self) { response in
-            print(response)
             guard let response = response.value else { return }
             process(response)
           }
